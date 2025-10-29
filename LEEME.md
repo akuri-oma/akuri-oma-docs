@@ -1,4 +1,10 @@
-    
+ 
+<img src="assets/logo-akuri-black.png" alt="Logo Akuri" align="left" width="25%" />
+<br />
+<hr />
+<br />
+
+   
 # Metodología Akuri-OMA
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -60,15 +66,15 @@ code Code
     
 ## 🚀 Cómo Empezar
 
-1.  **Lee la Guía de Inicio Rápido:** Configura el entorno Akuri-OMA en tu proyecto en menos de 5 minutos.
-    -   ➡️ **[QUICK_START.md](./QUICK_START.md)** (Español)
+1.  **Comprende los fundamentos:** Lee la [Introducción a Akuri-OMA](./docs/es/01-akuri-oma-intro.es.md) para entender el Desarrollo Guiado por Especificaciones (SDD) y la Arquitectura Modular Orquestada (OMA).
 
-2.  **Sigue el Tutorial:** Construye tu primera funcionalidad desde cero siguiendo nuestro tutorial guiado.
-    -   ➡️ **[TUTORIAL_Mi_Primera_Funcionalidad.md](./TUTORIAL_Mi_Primera_Funcionalidad.md)** (Español)
+2.  **Configura tu entorno:** Sigue la [Guía de Inicio Rápido](./docs/es/02-akuri-oma-tutorial.es.md#guia-de-inicio-rapido-de-akuri-oma) y continua con el [Tutorial Mi Primera Funcionalidad](./docs/es/02-akuri-oma-tutorial.es.md#tutorial-akuri-oma-mi-primera-funcionalidad) para vivir el flujo de Andamiaje Progresivo de principio a fin.
 
-3.  **Sumérgete en la Documentación Completa:** Explora todos los conceptos, principios y flujos de trabajo en detalle.
-    -   ➡️ **[Documentación Completa (Español)](./docs/es/)**
-    -   *(La documentación en inglés estará disponible próximamente)*
+3.  **Experimenta con el Test Drive:** Clona el sandbox [Akuri Test Drive (ES)](./akuiri-test-drive-ES/README.md), que incluye proyectos emparejados NestJS y Angular para practicar SDD y OMA en acción.
+
+4.  **Profundiza en la documentación completa:** Explora la base de conocimiento más amplia en tu idioma preferido.
+    -   ➡️ **[Documentación en Español](./docs/es/01-akuri-oma-intro.es.md)**
+    -   ➡️ **[Documentación en Inglés](./docs/en/01-akuri-oma-intro.en.md)**
 
 ## 📦 Proyectos de Ejemplo
 
@@ -81,7 +87,7 @@ La mejor manera de aprender es viendo una implementación completa. Estos reposi
 
 Akuri-OMA es un proyecto de código abierto, y damos la bienvenida a las contribuciones de la comunidad. Ya sea mejorando la documentación, traduciéndola a un nuevo idioma o adaptando los `guidelines` a una nueva tecnología (como React, Vue o Svelte), tu aporte es valioso.
 
-Por favor, lee nuestra **[Guía de Contribución](./CONTRIBUTING.md)** para empezar.
+Por favor, lee nuestra **[Guía de Contribución](./CONTRIBUIR.md)** para empezar.
 
 ## 📜 Licencia
 

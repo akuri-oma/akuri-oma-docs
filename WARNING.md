@@ -1,3 +1,9 @@
+
+<img src="assets/logo-akuri-black.png" alt="Logo Akuri" align="left" width="25%" />
+<br />
+<hr />
+<br />
+
 # ⚠️ WARNING: Experimental Project Status ⚠️
 
 Thank you for your interest in the Akuri-OMA methodology. Before you proceed, it is crucial that you read and understand the following points.

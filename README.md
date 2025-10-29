@@ -1,4 +1,9 @@
     
+<img src="assets/logo-akuri-black.png" alt="Logo Akuri" align="left" width="25%" />
+<br />
+<hr />
+<br />
+
 # Akuri-OMA Methodology
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -60,15 +65,15 @@ code Code
     
 ## 🚀 How to Get Started
 
-1.  **Read the Quick Start Guide:** Set up the Akuri-OMA environment in your project in under 5 minutes.
-    -   ➡️ **[QUICK_START.md](./QUICK_START.md)**
+1.  **Learn the foundations:** Read the [Introduction to Akuri-OMA](./docs/en/01-akuri-oma-intro.en.md) to understand Specification-Driven Development (SDD) and Orchestrated Modular Architecture (OMA).
 
-2.  **Follow the Tutorial:** Build your first feature from scratch by following our guided tutorial.
-    -   ➡️ **[TUTORIAL_My_First_Feature.md](./TUTORIAL_Mi_Primera_Funcionalidad.md)** (Spanish)
+2.  **Set up your environment:** Use the [Quick Start Guide](./docs/en/02-akuri-oma-tutorial.en.md#akuri-oma-quick-start-guide) and follow the [My First Feature tutorial](./docs/en/02-akuri-oma-tutorial.en.md#akuri-oma-tutorial-my-first-feature) to experience the Progressive Scaffolding Workflow end-to-end.
 
-3.  **Dive into the Full Documentation:** Explore all the concepts, principles, and workflows in detail.
-    -   ➡️ **[Full Documentation (Spanish)](./docs/es/)**
-    -   *(English documentation coming soon)*
+3.  **Experiment with the Test Drive:** Clone the [Akuri Test Drive (EN)](./akuiri-test-drive-EN/README.md) sandbox, which includes paired NestJS and Angular projects for practicing SDD and OMA in action.
+
+4.  **Dive into the full documentation:** Explore the broader knowledge base in your preferred language.
+    -   ➡️ **[English Docs](./docs/en/01-akuri-oma-intro.en.md)**
+    -   ➡️ **[Spanish Docs](./docs/es/01-akuri-oma-intro.es.md)**
 
 ## 📦 Example Projects
 
