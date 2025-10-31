@@ -1,23 +1,23 @@
 ---
 trigger: model_decision
-description: Orchestrator guideline that defines the AUDIT workflow under the Hierarchical Cascade Model. Invokes a sequence of micro-guidelines to audit formal and then functional compliance of a functionality.
+description: Orchestrator guideline that defines the AUDIT workflow under the Hierarchical Waterfall Model. It invokes a sequence of micro-guidelines to audit formal and then functional compliance of a functionality.
 status: active
 use_case: AUDIT, UI_AUDIT
 ---
 
 # Audit Workflow (audit.workflow.md)
 
-## 1. Simple Cascade Principle
+## 1. Simple Waterfall Principle
 
-This workflow follows a strict cascade model. YOU, as an Akuri Agent, MUST execute each step in sequence. If a step reveals critical deviations, the audit process stops, the report is generated, and subsequent steps are not proceeded with until corrections are made. **Formal compliance precedes functional compliance.**
+This workflow follows a strict waterfall model. YOU, as the Akuri Agent, MUST execute each step in sequence. If a step reveals critical deviations, the audit process stops, the report is generated, and you do not proceed to the following steps until corrections are made. **Formal compliance precedes functional compliance.**
 
 ## 2. The Audit Workflow
 
 ### Phase 1: Feature Location (User Input)
 
--   **Objective:** Unambiguously identify the audit scope.
+-   **Objective:** Identify without ambiguity the scope of the audit.
 -   **Your Task:**
-    1.  Request the **exact path** of the functionality folder to audit from the user. You should not search for it on your own.
+    1.  Request from the user the **exact path** of the functionality folder to audit. You must not search for it on your own.
     2.  If the user provides a list of features, create a plan to iterate over each one, generating an individual audit report per feature.
 
 ### Phase 2: Formal Compliance Audit (Architecture)
@@ -40,9 +40,9 @@ This workflow follows a strict cascade model. YOU, as an Akuri Agent, MUST execu
 #### Step 2.4: Internal File Structure Validation
 -   **Objective:** Verify if the file name matches its main content (e.g., if the main class in `feature.service.ts` is called `FeatureService`).
 -   **Action:** Invoke the micro-guideline `3_technology/[tech]/[tech].file-internal-class-naming.guideline.md`.
--   **Success Criterion:** There must be a 1:1 consistency between the file name and its main class/interface.
+-   **Success Criterion:** There must be 1:1 consistency between the file name and its main class/interface.
 
-**Checkpoint:** If critical deviations are found in Phase 2, the report is generated, and the audit process for this feature ends here.
+**Checkpoint:** If critical deviations are found in Phase 2, the report is generated and the audit process for this feature ends here.
 
 ### Phase 3: Functional Compliance Audit (Implementation)
 
@@ -51,9 +51,9 @@ This workflow follows a strict cascade model. YOU, as an Akuri Agent, MUST execu
 -   **Action:** Invoke the `project.manifest.md` and compare code imports against the "Authorized Technologies Catalog".
 -   **Success Criterion:** There should be no imports of unauthorized libraries (e.g., `ngx-toastr` in a PrimeNG project).
 
-#### Step 3.2: Implementation Pattern Validation
--   **Objective:** Verify if the implementation follows the methodology's patterns.
--   **Action:** Invoke the relevant implementation micro-guidelines, such as:
+#### Step 3.2: Implementation Patterns Validation
+-   **Objective:** Verify if the implementation follows methodology patterns.
+-   **Action:** Invoke relevant implementation micro-guidelines, such as:
     -   `[tech].service-controller-method-conventions.guideline.md` (For backend logic).
     -   `[tech].presentation-layer-conventions.guideline.md` (For frontend UI).
     -   `[tech].data-normalization.guideline.md` (For data consistency).
@@ -62,4 +62,4 @@ This workflow follows a strict cascade model. YOU, as an Akuri Agent, MUST execu
 ### Phase 4: Report Generation
 
 -   **Objective:** Consolidate all findings into a single document.
--   **Your Task:** Generate the document `[AUDIT].[feature-name].md`, grouping deviations found by each cascade step.
+-   **Your Task:** Generate the document `[AUDIT].[feature-name].md`, grouping found deviations by each waterfall step.
