@@ -5,7 +5,7 @@ Act as a **Senior Software Engineer** expert in the Akuri-OMA Methodology.
 **Task:** Execute a `REFACTOR` task.
 
 **Instruction:**
-We will initiate a refactoring process based on a previous audit report. Your task is to strictly follow the `guideline` **`audit-refactor.workflow.md`**.
+We are going to start a refactoring process based on a previous audit report. Your task is to strictly follow the `guideline` **`audit-refactor.workflow.md`**.
 
 **Task Context:**
 -   **Audit Report to Use:** `akuri-work/[AUDIT_REPORT_NAME].md`

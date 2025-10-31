@@ -11,11 +11,11 @@ use_case: DEBUG_BASIC, DEBUG_ADVANCED
 
 This document defines the systematic workflow that YOU, as an Akuri Agent, must follow to diagnose and resolve errors (`DEBUG`).
 
-The fundamental principle is: **"A compliant architecture is the first step to error-free code."** Before searching for a logic error, YOU must ensure that the code adheres to the established architecture, as many behavioral failures originate from structural deviations.
+The fundamental principle is: **"A compliant architecture is the first step to error-free code."** Before looking for a logic error, YOU must ensure that the code adheres to the established architecture, as many behavioral failures originate from structural deviations.
 
 ## 2. The Debugging Workflow
 
-### Phase 1: Triage and Error Classification (`CLARIFY`)
+### Phase 1: Error Triage and Classification (`CLARIFY`)
 
 Your first action is to understand the nature of the error.
 
@@ -30,49 +30,49 @@ Your first action is to understand the nature of the error.
     *   **Compilation/Syntax Error:** The code does not compile or fails to start. The console shows clear errors about syntax, types, missing imports, etc.
     *   **Logic/Behavior Error:** The code compiles and runs, but does not do what is expected.
 
-### Phase 2: Compilation/Syntax Error Diagnosis
+### Phase 2: Diagnosis of Compilation/Syntax Errors
 
-These errors are usually a "task list" provided by the compiler.
+These errors are usually a "to-do list" provided by the compiler.
 
-1.  **Console Analysis:** YOU will analyze the list of errors in the console.
-2.  **Iterative Solution (Cascade Model):**
+1.  **Console Analysis:** YOU will analyze the list of console errors.
+2.  **Iterative Solution (Waterfall Model):**
     *   **Action:** YOU will address the errors **one by one, from the first in the list downwards**.
-    *   **Reasoning:** Explain to the user: "Often, fixing an initial error (like an incorrect import) solves many of the subsequent cascade errors."
+    *   **Reasoning:** Explain to the user: "Often, fixing an initial error (such as an incorrect import) solves many of the subsequent cascading errors."
     *   **Correction Cycle:**
         a.  Identify the first error.
         b.  Propose the correction.
         c.  Simulate (or request) a new compilation.
-        d.  Re-analyze the new list of errors.
+        d.  Re-analyze the new error list.
         e.  Repeat until no errors remain.
 
-### Phase 3: Logic/Behavior Error Diagnosis
+### Phase 3: Diagnosis of Logic/Behavior Errors
 
 These errors are more complex and require a deeper approach, following the "architecture first" principle.
 
-1.  **Step 3.1: Mini-Architecture Compliance Audit (Optional but Recommended):**
+1.  **Step 3.1: Mini-Architectural Compliance Audit (Optional but Recommended):**
     *   **Objective:** Rule out that the error is due to an architectural deviation.
-    *   **Action:** Perform a quick version of the `audit.workflow.md` on the affected functionality, focusing on:
+    *   **Action:** Perform a quick version of `audit.workflow.md` on the affected functionality, focusing on:
         *   **File Naming and Location:** Are the files where they should be?
         *   **Service Structure (Frontend):** Is the `API`/`Action`/`State` separation respected?
         *   **Thin Controller Pattern (Backend):** Is the logic in the service?
-    *   **Communication:** "Before debugging the logic, I will perform a quick audit to ensure the code structure is correct, as this often reveals the root cause of behavioral issues."
+    *   **Communication:** "Before debugging the logic, I will perform a quick audit to ensure the code structure is correct, as this often reveals the root cause of behavioral problems."
 
 2.  **Step 3.2: Data Flow Analysis ("Follow the Trail"):**
-    *   **Objective:** Trace the data flow from user input to the point where the behavior diverges from the expected.
+    *   **Objective:** Trace the data flow from user input to the point where behavior diverges from expected.
     *   **Action (Frontend):**
-        a.  Start at the **`Presentation` component**: Does the user event (`click`, `submit`) correctly call the `Action Service` method?
+        a.  Start at the **Presentation component**: Does the user event (`click`, `submit`) correctly call the `Action Service` method?
         b.  Go to the **`Action Service`**: Is the `isLoading` state updated? Is the `API Service` called with the correct parameters?
         c.  Go to the **`API Service`**: Is the HTTP request built correctly?
-        d.  Analyze the **`API Service` response**: Does the `Action Service` correctly handle the `next` (success) and `error`?
+        d.  Analyze the **`API Service` response**: Does the `Action Service` correctly handle `next` (success) and `error`?
         e.  Go to the **`State Service`**: Is the state updated with the correct data?
-        f.  Return to the **`Presentation` component**: Does it correctly subscribe to the `State` and render the expected data?
-    *   **Action (Backend):** Follow a similar flow from the `Controller` -> `Service` -> `Repository/Database` and back.
+        f.  Return to the **Presentation component**: Does it subscribe correctly to the `State` and render the expected data?
+    *   **Action (Backend):** Follow a similar flow from `Controller` -> `Service` -> `Repository/Database` and back.
 
 3.  **Step 3.3: Hypothesis Formulation and Solution Proposal:**
-    *   **Action:** Based on the flow analysis, YOU will formulate a hypothesis about the cause of the error. (e.g., "My hypothesis is that the `Action Service` is not handling the API error case, so the `isLoading` state is never reset to `false`").
+    *   **Action:** Based on the flow analysis, YOU will formulate a hypothesis about the error cause. (e.g., "My hypothesis is that the `Action Service` is not handling the API error case, so the `isLoading` state never resets to `false`").
     *   **Proposal:** Propose the specific code modification to solve the problem.
 
 ### Phase 4: Correction Implementation and Verification
 
 1.  **Apply the Change:** Once the user approves the solution, YOU will apply the correction.
-2.  **Verification:** YOU must propose or describe the steps to verify that the correction not only fixes the original problem but has not introduced new errors (regression tests).
+2.  **Verification:** YOU must propose or describe the steps to verify that the correction not only solved the original problem, but did not introduce new errors (regression testing).

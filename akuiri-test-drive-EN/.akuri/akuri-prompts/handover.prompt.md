@@ -1,9 +1,9 @@
 "Act as a Tech Lead responsible for coordination between backend and frontend teams.
 
-Task: Create the Handover Document for the functionality [functionality-name] that we just completed in the backend.
+Task: Create the Handover Document for the [functionality-name] functionality that we just completed in the backend.
 
 Context:
-The implementation and testing of the functionality [functionality-name] in the backend-nest project have been completed. The API documentation in Swagger (/explorer) is up to date. Now we need to create the handover document for the frontend team (Angular).
+The implementation and testing of the [functionality-name] functionality in the backend-nest project have been completed. The API documentation in Swagger (/explorer) is updated. Now we need to create the handover document for the frontend team (Angular).
 
 Your Instruction:
 Generate the document [HANDOVER].[functionality-name].md in the akuri-work/ folder.

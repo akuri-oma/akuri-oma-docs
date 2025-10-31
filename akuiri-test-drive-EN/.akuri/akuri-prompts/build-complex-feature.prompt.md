@@ -1,8 +1,8 @@
-# Prompt Template: Start Building a Complex Feature
+# Prompt Template: Initiate the Creation of a Complex Feature
 
 Act as a **Senior Software Architect** expert in the Akuri-OMA Methodology.
 
-**Task:** Start building a new `complex` functionality from scratch, following the `guideline` `akuri.progressive-scaffolding-workflow.md`.
+**Task:** Initiate the creation of a new `complex` functionality from scratch, following the `guideline` `akuri.progressive-scaffolding-workflow.md`.
 
 **General Context:**
 [ **PASTE HERE A BRIEF DESCRIPTION OF THE FUNCTIONALITY'S PURPOSE** ]
@@ -10,7 +10,7 @@ Act as a **Senior Software Architect** expert in the Akuri-OMA Methodology.
 ---
 **Your Instruction:**
 
-We will start the process with the [ **CHOOSE: `backend` OR `frontend`** ].
+We are going to start the process with the [ **CHOOSE: `backend` OR `frontend`** ].
 
 Your first task is to initiate and complete **Phase 2: Feature Inventory**, operating in **`CREATIVE MODE`**.
 
