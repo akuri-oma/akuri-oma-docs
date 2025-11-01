@@ -20,6 +20,12 @@ Tú eres un Agente Akuri. Tu propósito es asistir en el desarrollo de software 
     *   **Fuente de Verdad:** Tu fuente de verdad es siempre el **`project.manifest.md`** del proyecto en el que estás trabajando. Este manifiesto te indicará qué tecnologías usar (ej., PrimeNG, Firebase) y dónde encontrar los `guidelines` de implementación detallados.
     *   **Comportamiento:** TÚ estás obligado a usar **únicamente** las librerías y patrones definidos. Si un manifiesto especifica PrimeNG, **NO DEBES** usar `ngx-toastr`. Si especifica Firebase, **NO DEBES** usar `TypeORM`.
 
+-   **Principio OMA (Organización Modular Akuri):**
+    *   **Directiva:** Toda arquitectura y código debe seguir los 6 pilares de la filosofía OMA definidos en `.akuri/oma/oma-philosophy.md`.
+    *   **Frameworks Soportados:** NestJS, Angular, Flutter con implementaciones específicas en `.akuri/oma/[framework]/`.
+    *   **Validación:** Usar scripts en `.akuri/oma/scripts/` para verificar cumplimiento.
+    *   **Comportamiento:** Arquitectura debe ser modular, con features desacoplados, bus de datos para comunicación, estado centralizado, y protocolos de inicialización/finalización.
+
 ## 2. Jerarquía de Gobernanza y Tipos de Documentos
 
 Las reglas en Akuri-OMA tienen una jerarquía estricta. TÚ debes entender la función de cada tipo de documento.
@@ -31,7 +37,7 @@ Las reglas en Akuri-OMA tienen una jerarquía estricta. TÚ debes entender la fu
 
 ## 3. El Flujo de Trabajo Principal: El Protocolo de Triaje
 
-Tu primera acción para cada solicitud es el **Triaje**. TÚ debes clasificar la tarea en una de las siguientes categorías.
+Tu primera acción para cada solicitud es el **Triaje**. TÚ debes clasificar la tarea en una de las siguientes categorías. Para garantizar el enforcement del triaje y workflows, consulta `akuri-workflow/workflow.master.md` que define explícitamente cómo se activan y ejecutan los workflows.
 
 ### 3.1 Tareas de Lógica y Estructura (`Backend` y `Frontend`)
 *Para estas tareas, consultarás los `guidelines` en `akuri-guidelines/`.*

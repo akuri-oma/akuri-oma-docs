@@ -61,33 +61,72 @@ Se proveerán plantillas mínimas para cada tipo de documento en la carpeta `.ak
 
 ## 4. Carpeta akuri-specs por Funcionalidad
 
-Cada funcionalidad o módulo del proyecto (ej., `src/modules/property`, `src/modules/product`) debe incluir una subcarpeta dedicada llamada `akuri-specs`. Como Agente Akuri, soy responsable de crear esta carpeta si no existe al iniciar trabajo en una funcionalidad específica.
+### 4.1 Ubicación y Propósito
+La carpeta `.akuri/akuri-specs/` centraliza especificaciones organizadas por funcionalidad en subcarpetas dedicadas. Cada funcionalidad independiente debe tener su propia subcarpeta siguiendo la convención estandarizada.
 
-### Propósito
-- Centralizar los documentos "vivos" relacionados con esa funcionalidad mientras se interactúa con ella.
-- Facilitar el acceso rápido a referencias durante tareas como BUILD, REFACTOR, AUDIT o DEBUG, permitiendo trazabilidad y auditoría posterior.
-- Mantener un registro local en la funcionalidad para evitar pérdida de información, complementando el uso opcional de `.akuri/akuri-history/`.
+**Propósito principal:**
+- Centralizar los documentos "vivos" relacionados con cada funcionalidad
+- Permitir múltiples tareas independientes sin conflictos
+- Facilitar trazabilidad y acceso rápido durante desarrollo
+- Mantener aislamiento entre funcionalidades
 
-### Contenido Recomendado
-- `[INVENTORY]...md`: Lista de características y requisitos funcionales.
-- `[PLAN]...md`: Blueprint técnico y plan de construcción.
-- `[TRACKER]...md`: Seguimiento de tareas durante BUILD o REFACTOR.
-- Otros documentos vivos: Especificaciones temporales, notas de diseño, o cualquier artefacto generado durante el proceso (ej., CONCEPT, REQUIREMENT).
-
-### Flujo de Trabajo
-1. Al iniciar trabajo en una funcionalidad, crear o verificar `akuri-specs` y almacenar documentos activos.
-2. Mantener los documentos en `akuri-specs` mientras la funcionalidad esté en desarrollo o modificación.
-3. El archivado de documentos en `.akuri/akuri-history/` es opcional y queda a criterio del desarrollador; no existe un proceso automático que obligue a quitarlos de `akuri-specs`.
-
-### Ejemplo de Estructura
+### 4.2 Estructura Estandarizada
 ```
-src/modules/property/
-├── akuri-specs/
-│   ├── [INVENTORY] property-features.md
-│   └── [PLAN] property-blueprint.md
-├── controllers/
-├── services/
-└── models/
+.akuri/akuri-specs/
+├── [funcionalidad-kebab-case]/
+│   ├── [REQUIREMENT].funcionalidad.md
+│   ├── [DESIGN].funcionalidad.md
+│   ├── [PLAN].funcionalidad.md
+│   ├── [TRACKER].funcionalidad.md
+│   └── [otros documentos específicos]
+├── [otra-funcionalidad]/
+│   └── ...
 ```
 
-Esto refuerza la organización por funcionalidad y mejora la mantenibilidad del proyecto.
+### 4.3 Convención de Nomenclatura
+- **Formato:** `[funcionalidad-en-kebab-case]` (ej., `product-management`, `user-authentication`)
+- **Reglas:** Minúsculas, palabras separadas por guiones, nombre descriptivo
+- Ver `akuri.06-akuri-specs-organization.guideline.md` para reglas completas
+
+### 4.4 Contenido por Subcarpeta
+**Documentos obligatorios:**
+- `[REQUIREMENT].funcionalidad.md`: Definición de requisitos
+- `[DESIGN].funcionalidad.md`: Solución conceptual
+- `[PLAN].funcionalidad.md`: Blueprint técnico
+- `[TRACKER].funcionalidad.md`: Seguimiento de progreso
+
+**Documentos opcionales:**
+- `[INVENTORY].funcionalidad.md`: Lista de características
+- `[PATTERN].funcionalidad.md`: Patrones reutilizables
+- `[HANDOVER].funcionalidad.md`: Contrato backend-frontend
+
+### 4.5 Workflow de Inicialización
+Al iniciar trabajo en una funcionalidad:
+1. **Verificar existencia:** Buscar subcarpeta en `.akuri/akuri-specs/`
+2. **Si existe:** Usar documentos existentes
+3. **Si no existe:** Crear subcarpeta y documentos base usando templates
+
+### 4.6 Gestión del Ciclo de Vida
+- **Durante desarrollo:** Mantener documentos activos en subcarpeta
+- **Al finalizar:** Archivado opcional a `.akuri/akuri-history/` (decisión del desarrollador)
+- **Paralelismo:** Múltiples funcionalidades pueden desarrollarse simultáneamente
+
+### 4.7 Ejemplo de Estructura
+```
+.akuri/akuri-specs/
+├── product-management/
+│   ├── [REQUIREMENT].product-management.md
+│   ├── [DESIGN].product-management.md
+│   ├── [PLAN].product-management.md
+│   └── [TRACKER].product-management.md
+├── user-authentication/
+│   ├── [REQUIREMENT].user-authentication.md
+│   └── ...
+└── payment-processing/
+    └── ...
+```
+
+### 4.8 Referencias
+- Ver `akuri.06-akuri-specs-organization.guideline.md` para reglas detalladas
+- Ver `akuri-workflow/templates/` para plantillas disponibles
+- Ver `akuri-workflow/examples/` para casos de uso

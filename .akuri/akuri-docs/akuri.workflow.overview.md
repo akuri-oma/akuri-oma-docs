@@ -5,6 +5,8 @@ description: Resumen del flujo de trabajo completo de la Metodología Akuri-OMA 
 
 # Flujo de Trabajo Completo: Metodología Akuri-OMA
 
+Para detalles específicos de cada workflow y su aplicación, consulta `akuri-workflow/workflow.master.md` y los documentos individuales en `akuri-workflow/`.
+
 ## Diagrama General del Flujo (Lámina 1)
 
 ```
@@ -70,4 +72,4 @@ Finalización y Auditoría
 - **Cuándo**: Todas las fases.
 - **Ejemplo**: Requisitos en REQUIREMENT, medidas en PLAN-SECURITY.
 
-Este flujo asegura desarrollo riguroso, trazable y seguro.
+Este flujo asegura desarrollo riguroso, trazable y seguro siguiendo los principios OMA (Organización Modular Akuri) definidos en `.akuri/oma/oma-philosophy.md`.
